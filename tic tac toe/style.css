@@ -101,30 +101,79 @@ body{
 .hide{
     display: none;
 }
-@media (max-width : 481px){
-    h1{
-        font-size: 2.5rem;
+@media (max-width: 481px) {
+    
+    h1 {
+        font-size: 2rem; 
         text-align: center;
         color: white;
-        margin-top: 4em;
-        margin-bottom: 1em;
+        margin: 2em 0; 
     }
-    .rst-game{
-        font-size: 1em;
-        padding : 1em;
+
+    
+    .rst-game {
+        font-size: 1rem;
+        padding: 0.8rem;
         border-radius: 8px;
-        background:linear-gradient(90deg,#084887,#909CC2);
+        background: linear-gradient(90deg, #084887, #909CC2);
         color: white;
         border: none;
     }
-    .container{
-        width: 90vmin;
-        height: 70vmin;
+
+    
+    .container {
+        width: 100%; 
+        height: auto; 
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
         align-items: center;
-        padding-bottom: 1rem;
-        margin-bottom: 2em;
+        padding: 1rem;
+    }
+
+    
+    .game {
+        width: 80vmin; 
+        height: 80vmin; 
+        gap: 5px; 
+    }
+
+    /* Grid Boxes */
+    .box {
+        height: 20vmin; 
+        width: 20vmin;
+        font-size: 4rem; 
+        border-radius: 1rem; 
+    }
+
+    .box:hover {
+        height: 21vmin; 
+        width: 21vmin;
+        transition-duration: 0.3s;
+    }
+
+    
+    .new-game, .rst-game {
+        font-size: 1rem;
+        padding: 0.8rem;
+        border-radius: 0.8rem;
+        margin: 1rem 0;
+    }
+
+    .new-game:hover, .rst-game:hover {
+        padding: 1rem;
+        font-size: 1.2rem;
+    }
+
+    
+    #msg {
+        font-size: 5vmin; 
+        font-weight: bold;
+        color: white;
+    }
+
+    .msg-container {
+        height: auto; 
+        padding: 1rem;
     }
 }
