@@ -14,7 +14,7 @@ h1{
     text-align: center;
 }
 body{
-    background: linear-gradient(90deg, #89f7fe, #66a6ff);
+    background:linear-gradient(90deg,#084887,#909CC2);
     text-align: center;
 }
 .container{
@@ -51,7 +51,7 @@ body{
 .rst-game{
     padding: 20px;
     font-size: 20px;
-    background: linear-gradient(90deg, #89f7fe, #66a6ff);
+    background:linear-gradient(90deg,#084887,#909CC2);
     border: none;
     border-radius: 1rem;
     font-weight: 700;
@@ -100,4 +100,31 @@ body{
 
 .hide{
     display: none;
+}
+@media (max-width : 481px){
+    h1{
+        font-size: 2.5rem;
+        text-align: center;
+        color: white;
+        margin-top: 4em;
+        margin-bottom: 1em;
+    }
+    .rst-game{
+        font-size: 1em;
+        padding : 1em;
+        border-radius: 8px;
+        background:linear-gradient(90deg,#084887,#909CC2);
+        color: white;
+        border: none;
+    }
+    .container{
+        width: 90vmin;
+        height: 70vmin;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        padding-bottom: 1rem;
+        margin-bottom: 2em;
+    }
 }
