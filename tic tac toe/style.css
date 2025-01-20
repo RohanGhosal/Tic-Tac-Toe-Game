@@ -1,13 +1,20 @@
+@font-face {
+    font-family: "aerospace";
+    src: url(aerospace.otf);
+}
 *{
     margin: 0px;
     padding: 0px;
+    font-family: aerospace;
 }
 h1{
-    color: #ED474A;
-    text-decoration: underline;
+    color:white;
+    font-style: aerospace;
+    font-size: 4rem;
+    text-align: center;
 }
 body{
-    background-color: #033F63;
+    background:linear-gradient(90deg,#084887,#909CC2);
     text-align: center;
 }
 .container{
@@ -44,11 +51,12 @@ body{
 .rst-game{
     padding: 20px;
     font-size: 20px;
-    background-color: #28666E;
+    background:linear-gradient(90deg,#084887,#909CC2);
     border: none;
     border-radius: 1rem;
     font-weight: 700;
     box-shadow: 0 0 1rem rgba(0,0,0,0.5);
+    color: white;
 }
 .rst-game:hover{
     padding: 22px;
@@ -60,11 +68,12 @@ body{
 .new-game{
     padding: 20px;
     font-size: 20px;
-    background-color: #28666E;
+    background:linear-gradient(90deg,#084887,#909CC2);
     border: none;
     border-radius: 1rem;
     font-weight: 700;
     box-shadow: 0 0 1rem rgba(0,0,0,0.5);
+    color: white;
 }
 
 .new-game:hover{
@@ -76,6 +85,7 @@ body{
 #msg{
     font-size: 8vmin;
     font-weight: 900;
+    color: white;
     
 }
 
@@ -85,7 +95,7 @@ body{
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    color: #ED474A;
+    background:linear-gradient(90deg,#084887,#909CC2);
 }
 
 .hide{
