@@ -62,7 +62,7 @@ h1 {
 /* Restart and New Game Buttons */
 .rst-game,
 .new-game {
-    padding: 20px;
+    padding: 10px;
     font-size: 20px;
     background: linear-gradient(90deg, #084887, #909CC2);
     border: none;
