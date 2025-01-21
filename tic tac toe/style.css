@@ -2,28 +2,36 @@
     font-family: "aerospace";
     src: url(aerospace.otf);
 }
-*{
-    margin: 0px;
-    padding: 0px;
-    font-family: aerospace;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: aerospace, Arial, sans-serif; /* Added fallback fonts */
 }
-h1{
-    color:white;
-    font-style: aerospace;
+
+body {
+    background: linear-gradient(90deg, #084887, #909CC2);
+    text-align: center;
+}
+
+/* Title */
+h1 {
+    color: white;
     font-size: 4rem;
     text-align: center;
 }
-body{
-    background:linear-gradient(90deg,#084887,#909CC2);
-    text-align: center;
-}
-.container{
-    height: 80vh;
+
+/* Centered Container */
+.container {
+    height: 80vh; /* Default height */
     display: flex;
     justify-content: center;
     align-items: center;
 }
-.game{
+
+/* Game Grid */
+.game {
     height: 60vmin;
     width: 60vmin;
     display: flex;
@@ -32,118 +40,96 @@ body{
     align-items: center;
     gap: 10px;
 }
-.box{
+
+/* Game Box */
+.box {
     height: 18vmin;
     width: 18vmin;
     border-radius: 1.5rem;
     border: none;
-    box-shadow: 0 0 1rem rgba(0,0,0,0.3);
+    box-shadow: 0 0 1rem rgba(0, 0, 0, 0.3);
     font-size: 65px;
     font-weight: 200;
     color: #1f0977;
-  
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
-.box:hover{
-    height: 19vmin;
-    width: 19vmin;
-    transition-duration: 0.5s;
+
+.box:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 1.5rem rgba(0, 0, 0, 0.4);
 }
-.rst-game{
+
+/* Restart and New Game Buttons */
+.rst-game,
+.new-game {
     padding: 20px;
     font-size: 20px;
-    background:linear-gradient(90deg,#084887,#909CC2);
+    background: linear-gradient(90deg, #084887, #909CC2);
     border: none;
     border-radius: 1rem;
     font-weight: 700;
-    box-shadow: 0 0 1rem rgba(0,0,0,0.5);
+    box-shadow: 0 0 1rem rgba(0, 0, 0, 0.5);
     color: white;
-}
-.rst-game:hover{
-    padding: 22px;
-    font-size: 22px;
-    transition-duration: 0.5s;
-    margin: 10px;
+    transition: all 0.3s ease;
+    cursor: pointer;
 }
 
-.new-game{
-    padding: 20px;
-    font-size: 20px;
-    background:linear-gradient(90deg,#084887,#909CC2);
-    border: none;
-    border-radius: 1rem;
-    font-weight: 700;
-    box-shadow: 0 0 1rem rgba(0,0,0,0.5);
-    color: white;
+.rst-game:hover,
+.new-game:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 1.5rem rgba(0, 0, 0, 0.6);
 }
 
-.new-game:hover{
-    padding: 22px;
-    font-size: 22px;
-    transition-duration: 0.5s;
-}
-
-#msg{
+/* Message Display */
+#msg {
     font-size: 8vmin;
     font-weight: 900;
     color: white;
-    
 }
 
-.msg-container{
+.msg-container {
     height: 100vmin;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    background:linear-gradient(90deg,#084887,#909CC2);
+    background: linear-gradient(90deg, #084887, #909CC2);
 }
 
-.hide{
+/* Hidden Element */
+.hide {
     display: none;
 }
+
+/* Media Query: max-width 481px */
 @media (max-width: 481px) {
-    
     h1 {
         font-size: 2rem; 
         text-align: center;
         color: white;
-        margin: 2em 0; 
+        margin: 2em 0;
     }
 
-    
-    .rst-game {
-        font-size: 1rem;
-        padding: 0.8rem;
-        border-radius: 8px;
-        background: linear-gradient(90deg, #084887, #909CC2);
-        color: white;
-        border: none;
-    }
-
-    
     .container {
-        width: 100%; 
         height: auto; 
         display: flex;
-        flex-wrap: wrap;
         justify-content: center;
         align-items: center;
+        margin: 0 auto; /* Centers the container horizontally */
         padding: 1rem;
     }
 
-    
     .game {
         width: 80vmin; 
-        height: 80vmin; 
-        gap: 5px; 
+        height: auto; 
+        gap: 5px;
     }
 
-    
     .box {
         height: 20vmin; 
         width: 20vmin;
         font-size: 4rem; 
-        border-radius: 1rem; 
+        border-radius: 1rem;
     }
 
     .box:hover {
@@ -152,20 +138,20 @@ body{
         transition-duration: 0.3s;
     }
 
-    
-    .new-game, .rst-game {
+    .new-game,
+    .rst-game {
         font-size: 1rem;
         padding: 0.8rem;
         border-radius: 0.8rem;
         margin: 1rem 0;
     }
 
-    .new-game:hover, .rst-game:hover {
+    .new-game:hover,
+    .rst-game:hover {
         padding: 1rem;
         font-size: 1.2rem;
     }
 
-    
     #msg {
         font-size: 5vmin; 
         font-weight: bold;
