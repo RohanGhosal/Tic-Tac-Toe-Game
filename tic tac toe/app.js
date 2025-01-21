@@ -54,6 +54,7 @@ const disableBtns = () => {
     for (let box of boxes) {
         box.disabled = true;
     }
+    msgContainer.classList.remove("hide");
 };
 
 // Enabling all buttons/boxes
@@ -62,6 +63,7 @@ const enableBtns = () => {
         box.disabled = false;
         box.innerText = "";
     }
+    msgContainer.classList.add("hide");
 };
 
 // Handling draw condition
